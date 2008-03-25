@@ -1,0 +1,4 @@
+category: Graphics Ruby
+requires: ruby
+sdesc: "Ruby image size module"
+ldesc: "Ruby module for measuring image size"

@@ -1,0 +1,44 @@
+ruby-imagesize
+------------------------------------------
+Ruby module for measuring image size
+
+Runtime requirements:
+  ruby-1.8.6-1
+
+Canonical website:
+  http://rubyforge.org/projects/imagesize/
+
+Canonical download:
+  http://rubyforge.org/frs/?group_id=3460
+
+-------------------------------------------
+
+Build instructions:
+  unpack ruby-imagesize-0.1.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ruby-imagesize-0.1.1-X.cygport all
+
+This will create:
+  /usr/src/ruby-imagesize-0.1.1-X-src.tar.bz2
+  /usr/src/ruby-imagesize-0.1.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/ruby/site_ruby/1.8/image_size.rb
+  /usr/lib/ruby/site_ruby/1.8/image_size/version.rb
+  /usr/share/doc/ruby-imagesize-0.1.1/README.txt
+
+------------------
+
+Port Notes:
+
+----- version 0.1.1-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
