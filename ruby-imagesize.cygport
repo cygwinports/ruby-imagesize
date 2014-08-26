@@ -2,12 +2,23 @@ inherit rubygem
 
 NAME="ruby-imagesize"
 VERSION=0.1.1
-RELEASE=3
+RELEASE=4
 CATEGORY="Ruby"
 SUMMARY="Ruby image size library"
 DESCRIPTION="Measures the size of an image (GIF, PNG, JPEG, etc.)"
 
 PATCH_URI="
-	01-gemspec.patch
 	http://pkgs.fedoraproject.org/cgit/rubygem-imagesize.git/plain/${NAME}-0.1.1-ruby19-regex-utf8.patch
+	http://pkgs.fedoraproject.org/cgit/rubygem-imagesize.git/plain/rubygem-imagesize-0.1.1-regex-magic.patch
 "
+
+ARCH=noarch
+
+PKG_NAMES="${NAME} ${NAME}-doc"
+ruby_imagesize_CONTENTS=${RUBYGEM_INSTDIR#/}" "${RUBYGEM_SPEC#/}
+ruby_imagesize_doc_CONTENTS=${RUBYGEM_DOCDIR#/}
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	sed -i -e '1d' -e 's|\r||' lib/image_size.rb
+}
